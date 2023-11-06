@@ -1,0 +1,265 @@
+body{
+    margin: 0;   
+    background-color:#add8e6;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f4f3ee;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+header > p {
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: 24px;
+}
+
+aside {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: initial;
+    transform: translateX(-230px);
+    transition: 1.2s;
+    z-index: 2;
+}
+
+aside h1{
+    margin-top: 120px;
+}
+
+#hamburger{
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.tracinho{
+    background-color: black;
+    border-radius: 25%;
+    height: 6px;
+    margin-top: 5px;
+    transition: 1.2s;
+}
+
+aside.active{
+    transform: translateX(0);
+    transition: 1.2s;
+}
+
+#hamburger.active .tracinho:nth-child(1){
+    transform: rotate(45deg) translate(7px, 9px);
+}
+
+#hamburger.active .tracinho:nth-child(2){
+    display: none;
+}
+
+#hamburger.active .tracinho:nth-child(3){
+    transform: rotate(135deg);
+}
+
+/*CARRROSSEL*/
+*{box-sizing:border-box}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h3{
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: 35px;
+}
+
+h5{
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: 23px;
+    margin: 0;
+}
+
+.logo{
+    width: 200px;
+    height: 200px;
+}
+
+
+#secao1{
+    font-size: 19px;
+    margin: auto;
+    margin-top: 200px;
+    width: 80%;
+}
+
+#secao1 > div > img{
+    width: 225px;
+    height: 225px;
+    margin: auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex > div > h3{
+    margin: 0;
+}
+
+.flex > div > p {
+    margin: 0;
+}
+
+.bottom{
+    margin-bottom: 25px;
+}
+
+#secao2{
+    font-size: 19px;
+    margin: auto;
+    margin-top: 100;
+    width: 80%;
+}
+
+/* Inicio slides */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* Ocultar as imagens por padrão */
+.mySlides {
+    display: none;
+}
+
+/*botao de voltar e proximo */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+
+/* Posicione o "botão próximo" à direita */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Ao passar o mouse, adicione uma cor de fundo preta com um pouco de transparência */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Os pontos/marcadores/indicadores */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color:#f4f3ee;
+}
+
+
+/* Animação esmaecida */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+#secao3{
+    font-size: 19px;
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+}
+
+#secao3 > iframe{
+    margin: auto;
+}
+
+#secao4{
+    font-size: 19px;
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+}
+
+#secao5{
+    font-size: 19px;
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+}
+
+
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+
+@media(max-width: 768px){
+    header > p {
+        display: none;
+    }
+    #secao5 > .flex{
+        display: block;
+    }
+    footer{
+        width: 100%;
+    }
+}
+
+@media(min-width: 769px){
+    aside {
+        display: none;
+    }
+    #secao5 > .flex{
+        flex-wrap: wrap;
+    }
+    
+}
